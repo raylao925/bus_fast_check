@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _loadCSV() async {
-    final rawData = await rootBundle.loadString("/assets/bus_list.csv");
+    final rawData = await rootBundle.loadString("assets/csv/bus_list.csv");
     List<List<dynamic>> listData = const CsvToListConverter().convert(rawData);
     setState(() {
       _data = listData.sublist(1); // Assuming the first row is header
